@@ -1,0 +1,196 @@
+:root {
+    /* Color Theme */
+    --primary-color: #1e1e1e; /* Almost Black */
+    --accent-color: #f39c12; /* Orange */
+    --highlight-color: #e74c3c; /* Red */
+    --background-color: #f3f4f6; /* Light Gray */
+    --text-color: #2d3436; /* Dark Gray */
+    --header-color: #1e1e1e; /* Almost Black */
+    --button-color: #f39c12; /* Orange */
+    --button-hover-color: #e67e22; /* Darker Orange */
+    --border-color: #dfe6e9;
+    --light-accent: #ffffff; /* White */
+}
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    background: linear-gradient(to right, #f3f4f6, #ffffff);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+h2 {
+    color: var(--header-color);
+    font-size: 2rem;
+    margin-bottom: 20px;
+    border-bottom: 3px solid var(--accent-color);
+    padding-bottom: 10px;
+    position: relative;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 5px;
+    background-color: var(--highlight-color);
+    border-radius: 5px;
+}
+
+label {
+    font-weight: bold;
+    color: var(--header-color);
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    border-color: var(--accent-color);
+    outline: none;
+}
+
+button {
+    padding: 14px 24px;
+    background-color: var(--button-color);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--button-hover-color);
+    transform: scale(1.05);
+}
+
+.resume {
+    margin-top: 30px;
+    padding: 30px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    font-family: 'Georgia', serif;
+    line-height: 1.8;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.resume:hover {
+    transform: translateY(-5px);
+}
+
+header.personal-info {
+    background-color: var(--light-accent);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+header.personal-info h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    color: var(--highlight-color);
+}
+
+header.personal-info p {
+    font-size: 1.2rem;
+    color: var(--header-color);
+}
+
+header.personal-info a {
+    color: var(--highlight-color);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+header.personal-info a:hover {
+    color: var(--button-color);
+}
+
+section {
+    margin-top: 30px;
+}
+
+section h2 {
+    font-size: 1.6rem;
+    color: var(--header-color);
+    margin-bottom: 15px;
+    position: relative;
+}
+
+section h2::before {
+    content: '•';
+    font-size: 1.2rem;
+    color: var(--accent-color);
+    position: absolute;
+    left: -20px;
+    top: 0;
+}
+
+section p, section ul {
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+section ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+section ul li {
+    background-color: var(--light-accent);
+    margin-bottom: 10px;
+    padding: 12px;
+    border-radius: 6px;
+    color: var(--text-color);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.download {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 14px 24px;
+    background-color: var(--highlight-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.download:hover {
+    background-color: var(--button-hover-color);
+    transform: scale(1.05);
+}
